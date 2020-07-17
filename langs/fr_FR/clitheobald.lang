@@ -1,0 +1,132 @@
+Module104003Name = CliTheobald
+Module104003Desc = CliTheobald Description
+
+ATMAbout = Ce module a été développé par <a href="http://www.atm-consulting.fr" target="_blank">ATM Consulting</a><br>Vous pouvez retrouver la documentation sur notre <a href="http://wiki.atm-consulting.fr/index.php/Accueil" target="_blank">wiki</a><br><br>Pour toute question technique ou retour, contactez-nous sur <a href="mailto:support@atm-consulting.fr">support@atm-consulting.fr</a><br><br>Pour toute question commerciale, contactez-nous sur <a href="mailto:contact@atm-consulting.fr">contact@atm-consulting.fr</a> ou au +33 9 77 19 50 70<br><br>Retrouvez nos autres modules sur <a href="http://www.dolistore.com/search.php?orderby=position&orderway=desc&search_query=atm&submit_search=Rechercher" target="_blank">Dolistore</a>
+
+CliTheobaldSetup = Configuration du module CliTheobald
+CliTheobaldAbout = A propos du module CliTheobald
+
+CliTheobald=CliTheobald
+AbricotNeedUpdate=Le module abricot doit être mis à jour
+LinkToThirparty=Lien vers le tiers
+
+# SETUP
+ParamLabel=Nom du paramètre
+ParamDesc=Une description si besoin
+ParamHelp=Le contenu de l'aide
+DoSearchOpenedOperationOrderOnThisStatus=Liste des statuts d'ordre de réparation à tester lors de la création d'un nouvel OR sur un véhicule pour alerter l'utilisateur
+CliTheobaldParametersAPITitle=Paramètres de l'API Volvo
+THEO_PRICE_MAJORATION_PERCENT_ON_PRODUCT_PRICE_MODIFY=Pourcentage de majoration à appliquer sur les prix d'achat des entités filles à la modification d'un prix de vente d'un produit dans une entité
+THEO_PRICE_MAJORATION_PERCENT_ON_PRODUCT_PRICE_MODIFY_help= Exemple pour une majoration de 10% : le produit P a un prix de vente de 5€ => dans les entités filles le prix d'achat sera 5.50€ (calcul : 5 + 5*10/100)
+OPERATION_ORDER_BARCODE_TYPE = Type de codes-barres à utiliser
+
+# MENU
+TopMenuCliTheobald=CliTheobald
+
+# STATUS
+CliTheobaldStatusCanceled=Abandonnée (fermée)
+CliTheobaldStatusDraft=Brouillon (à valider)
+CliTheobaldStatusValidated=Validée (à accepter)
+CliTheobaldStatusRefused=Refusée (fermée)
+CliTheobaldStatusAccepted=Acceptée (fermée)
+
+CliTheobaldStatusShortCanceled=Abandonnée
+CliTheobaldStatusShortDraft=Brouillon
+CliTheobaldStatusShortValidated=Validée
+CliTheobaldStatusShortRefused=Refusée
+CliTheobaldStatusShortAccepted=Acceptée
+
+CliTheobaldORList=Liste des opérations
+
+# Extrafields
+supplier_order_type=Type de commande fournisseur
+overhead_category=Catégorie Frais généraux
+Driver=Chauffeur
+
+# LIST
+CliTheobaldList=Liste CliTheobald
+NoCliTheobald=(vide)
+
+# CARD
+kilometrageOnCreate=Kilometrage à la création
+
+NewCliTheobald=Création CliTheobald
+CliTheobaldCard=Fiche CliTheobald
+
+CliTheobaldModify=Modifier
+CliTheobaldClone=Cloner
+CliTheobaldValid=Valider
+CliTheobaldAccept=Accepter
+CliTheobaldRefuse=Refuser
+CliTheobaldReopen=Rouvrir
+CliTheobaldCancel=Abandonner
+CliTheobaldDelete=Supprimer
+
+ConfirmValidateCliTheobaldTitle=Confirmation d'activation
+ConfirmValidateCliTheobaldBody=Souhaitez-vous vraiment activer cette fiche CliTheobald %s ?
+
+ConfirmDeleteCliTheobaldTitle=Confirmation de suppression
+ConfirmDeleteCliTheobaldBody=Souhaitez-vous vraiment supprimer cette fiche CliTheobald %s ?
+
+
+cliCreateOperationOrderFromVehicule=Créer ordre de réparation
+
+#ERROR
+fkSocVehiculeError=Ce vehicule n'a pas de Tiers associé
+NoClosedOperationOrderForThisVehiculeFound=Il existe déjà un OR %s non clôturer sur le véhicule
+
+ThisProductWasFoundInAnotherOperationOrder=Cette opération a déjà été effectuée pour ce véhicule
+MissingOperationOrderStatus = Veuillez configurer les statuts des ordres de réparations (Réparation->Gestion des statuts)
+
+ErrorExistingPrice=Un prix existe déjà pour la référence fournisseur %s dans l'entité %s %s pour le produit %s  <BR />Pas de création/modification dans cette entité
+ErrorCreationPriceEntity=Erreur lors de la récupération/création du prix dans l'entité %s : %s
+
+
+#CRON
+2lTrucksCRONUpdateTimeAndPriceFromVirtualProduct = Mise à jour des prix et temps des produit paquagé (produits virtuels) %s
+2lTrucksCRONOK=Fin OK le %s, nb produits mis à jour : %s
+2lTrucksCRONKO=Fin KO : nombre d'erreur %s, nb produits mis à jour : %s
+2lTrucksCRONErrProduct=Erreur sur le produit  %s
+2lTrucksCRONGetKmVehicles = Récupération des Km véhicules avec l'API volvo
+CronTaskAdded=Travaux planifié ajouté (vérifiez les taches dans Acceuil->Configurtion->travaux planifiés et l'activation du module travaux planifié)
+
+#EVENT
+OperationOrderToCreate=Ordre de réparation à créer
+OPERATION_ORDER_STATUS_USED_TO_CREATE_OR_FROM_EVENT=Statut à utiliser dans la création d'un OR depuis un événement
+ErrNoVehiculeLinkedToEvent=Aucun vehicule n'est lié à l'événement
+ErrNoOperationLinkedToEvent=Aucune opération n'est liée à l'événement
+ErrORStatusConfiguration=Veuillez sélectionner le statut à utiliser pour créer l'Ordre de réparation dans la configuration du module clitheobald
+ErrCanFetchVehicule=Impossible de récupérer les infos du vehicule %d
+OperationOrderCreationSuccess=L'ordre de répération %s a été créé
+OperationOrderCreationErrorConf=Configuration : "Statut à utiliser dans la création d'un OR depuis un événement" non défini
+OperationOrderCreationError=Impossible de créer l'ordre de réparation
+OperationOrderAddlineError=Impossible d'ajouter la ligne de produit
+
+# Extrafields
+supplier_order_type=Type de commande fournisseur
+overhead_category=Catégorie Frais généraux
+OrScan=Pointable OR
+OrScanHelp=Si coché, alors c'est le code barre qui sera affiché à la place de la référence dans le document Thor des ordres de réparations
+DefaultWarehouse=Entrepôt par défaut
+DefaultTmpWarehouse=Zone entrepôt temp. transfert
+
+# PDF
+PDFThorDescription=Modèle de PDF de <strong>Th</strong>éobald pour les <strong>or</strong>
+TimePlannedQty=Temps Qté
+VehiculeNotFound=Véhicule introuvable
+VehiculeInfos=Détails véhicule
+ThorWarehouse=Emplacement
+PlaceOfEntitie=Site de %s
+
+#MASSACTION OR
+CreateOR=Créer un ordre de réparation
+ConfirmVehicles=Confirmez ces véhicules
+ConfirmCreationORVehicles=Un ordre de réparation existe déjà pour ces véhicules
+ConfirmORCreationVehicle=L'OR %s a été créé pour le véhicule %s
+
+# Default warehouse tab
+Entitydefautwarehouse=Entrepôt par défaut
+MissingField=Donnée manquante
+CantCreate=Impossible de créer
+
+KmIsInferior=Le kilométrage est inférieur à ce qui a déjà été saisi auparavant
